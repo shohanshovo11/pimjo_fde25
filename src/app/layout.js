@@ -3,9 +3,10 @@ import "./globals.css";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600"], 
+  weight: ["400", "500", "700"],
+  display: "swap",
+  variable: "--font-dm-sans",
 });
-
 
 export const metadata = {
   title: "Create Next App",
@@ -15,9 +16,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
 
-    <html lang="en">
+    <html lang="en" className={dmSans.variable}>
       <body
-        className={`${dmSans.className} antialiased`}
+        className={`antialiased`}
       >
         {children}
       </body>

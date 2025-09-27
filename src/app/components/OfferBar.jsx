@@ -94,7 +94,7 @@ export const OfferBar = () => {
         {/* Right side - Login/Register */}
         <div className="flex items-center space-x-4 mr-4">
           <Image
-            src="/icons/user.svg"
+            src="/icons/user-white.svg"
             alt="User"
             width={16}
             height={16}

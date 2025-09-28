@@ -5,15 +5,15 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="w-full bg-[#F3F4F6] text-[16px] font-normal">
-      <div className="mx-auto max-w-7xl px-20 py-[112px]">
-        <div className="px-8 grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-23.5">
+      <div className="mx-auto max-w-7xl px-3 md:px-20 py-12 md:py-[112px]">
+        <div className="px-3 md:px-8 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-23.5">
           {/* Brand + blurb + socials */}
           <div>
             <div className="flex items-center gap-2">
               <Image src="/logo.svg" alt="Logo" width={129.38} height={30} />
             </div>
 
-            <p className="mt-4 text-gray-500 leading-relaxed">
+            <p className="mt-4 text-gray-500 leading-relaxed text-sm md:text-base">
               TailGrids comes with all the essential UI components you need to
               create beautiful websites based on Tailwind CSS.
             </p>
@@ -27,11 +27,11 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="col-span-2 flex gap-10 lg:gap-20 mt-10 lg:mt-0 lg:justify-end">
+          <div className="col-span-1 lg:col-span-2 flex flex-col md:flex-row gap-8 md:gap-10 lg:gap-20 mt-8 lg:mt-0 lg:justify-end">
             {/* Clothing links */}
             <nav>
               <h4 className="text-lg font-semibold text-gray-900">Clothing</h4>
-              <ul className="mt-4 space-y-3 text-[#6B7280]">
+              <ul className="mt-4 space-y-3 text-[#6B7280] text-sm md:text-base">
                 <li>
                   <a className="hover:text-gray-900" href="#">
                     Tops
@@ -68,7 +68,7 @@ export default function Footer() {
             {/* Shoes links */}
             <nav>
               <h4 className="text-lg font-semibold text-gray-900">Shoes</h4>
-              <ul className="mt-4 space-y-3 text-[#6B7280]">
+              <ul className="mt-4 space-y-3 text-[#6B7280] text-sm md:text-base">
                 <li>
                   <a className="hover:text-gray-900" href="#">
                     Hills shoed
@@ -113,13 +113,13 @@ export default function Footer() {
               <h4 className="text-lg font-semibold text-gray-900">
                 Newsletter
               </h4>
-              <p className="mt-4 text-gray-500">
+              <p className="mt-4 text-gray-500 text-sm md:text-base">
                 Signup for latest news and insights from TailGrids
               </p>
 
               <form
                 onSubmit={(e) => e.preventDefault()}
-                className="mt-5 space-y-3"
+                className="mt-5 space-y-3 max-w-sm"
               >
                 <div className="relative">
                   <input

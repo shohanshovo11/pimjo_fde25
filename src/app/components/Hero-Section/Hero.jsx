@@ -3,7 +3,7 @@ import PromoCard from "./PromoCard";
 
 export default function Hero() {
   return (
-    <div className="w-full py-20">
+    <div className="w-full py-4 lg:py-20">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-stretch">
         {/* Main Hero Content - Left Side */}
         <section className="lg:col-span-2">

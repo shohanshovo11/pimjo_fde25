@@ -3,7 +3,7 @@ import Image from "next/image";
 export const OfferBar = () => {
   return (
     <div
-      className="bg-[#111827] text-white py-4 px-2"
+      className="bg-[#111827] text-white py-4.5 lg:px-36"
       style={{
         fontWeight: 400,
         fontStyle: "normal",

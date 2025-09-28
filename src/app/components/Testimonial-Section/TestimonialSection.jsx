@@ -3,7 +3,7 @@ import TestimonialCard from "./TestimonialCard";
 
 export default function TestimonialSection({ items = [] }) {
   return (
-    <section className="w-full bg-gray-50">
+    <section className="w-full bg-[#F3F4F6]">
       <div className="mx-auto max-w-7xl px-28 py-[112px]">
         {/* Header */}
         <div className="max-w-[640px]">

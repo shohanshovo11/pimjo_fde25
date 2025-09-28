@@ -23,15 +23,15 @@ export default function ProductCard({ product }) {
           alt={image.alt}
           width={image.width || 640}
           height={image.height || 480}
-          className="w-full h-64 md:h-72 object-cover object-center rounded-lg"
+          className="w-full h-72 md:h-64 lg:h-72 object-cover object-center rounded-lg"
           priority={false}
         />
 
         {/* Hot badge */}
         {label ? (
-          <div className="absolute left-4 top-4">
+          <div className="absolute left-3 md:left-4 top-3 md:top-4">
             <span
-              className="bg-[#FEF2F2] inline-flex items-center justify-center rounded-2xl px-2 py-1 text-sm font-medium text-[#B91C1C]"
+              className="bg-[#FEF2F2] inline-flex items-center justify-center rounded-xl md:rounded-2xl px-2 py-1 text-xs md:text-sm font-medium text-[#B91C1C]"
               style={{ letterSpacing: "-0.2px", lineHeight: "16px" }}
             >
               {label}
@@ -43,24 +43,28 @@ export default function ProductCard({ product }) {
         <button
           type="button"
           aria-label="Add to wishlist"
-          className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/90text-gray-700 shadow-sm ring-1 ring-gray-200 bg-white"
+          className="absolute right-3 md:right-4 top-3 md:top-4 inline-flex h-8 md:h-9 w-8 md:w-9 items-center justify-center rounded-full bg-white/90 text-gray-700 shadow-sm ring-1 ring-gray-200"
         >
-          <HeartIcon className="h-5 w-5" />
+          <HeartIcon className="h-4 md:h-5 w-4 md:w-5" />
         </button>
       </div>
 
       {/* Content (padding x = 32px) */}
-      <div className="mt-4">
+      <div className="mt-3 md:mt-4">
         {/* Name & price */}
-        <div className="flex items-start justify-between gap-3">
-          <h3 className="text-[15px] font-medium text-gray-900">{name}</h3>
-          <span className="text-[15px] font-medium text-gray-900">{price}</span>
+        <div className="flex items-start justify-between gap-2 md:gap-3">
+          <h3 className="text-sm md:text-[15px] font-medium text-gray-900">
+            {name}
+          </h3>
+          <span className="text-sm md:text-[15px] font-medium text-gray-900">
+            {price}
+          </span>
         </div>
 
         {/* Blurb */}
         <p
           style={{ letterSpacing: "-0.2px", lineHeight: "16px" }}
-          className="mt-1 text-sm text-gray-500 font-normal"
+          className="mt-1 text-xs md:text-sm text-gray-500 font-normal"
         >
           {blurb}
         </p>
@@ -70,7 +74,7 @@ export default function ProductCard({ product }) {
           type="button"
           onClick={onAddToCart}
           className={[
-            "mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg h-11 border border-[#D1D5DB]",
+            "mt-4 md:mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg h-10 md:h-11 border border-[#D1D5DB]",
             isPrimary
               ? "bg-indigo-600 text-white hover:bg-indigo-600/90"
               : "text-gray-700 ring-gray-300 hover:bg-gray-50",
@@ -92,7 +96,7 @@ export default function ProductCard({ product }) {
               strokeLinejoin="round"
             />
           </svg>
-          <span className="text-sm font-medium">Add to cart</span>
+          <span className="text-xs md:text-sm font-medium">Add to cart</span>
         </button>
       </div>
     </article>

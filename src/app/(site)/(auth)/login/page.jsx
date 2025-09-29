@@ -42,7 +42,7 @@ export default function LoginPage() {
 
       if (response.ok) {
         // Login successful
-        localStorage.setItem("token", data.token);
+        document.cookie = `auth_token=${data.token}; path=/; secure; samesite=strict`;
         router.push("/dashboard");
       } else {
         // Login failed

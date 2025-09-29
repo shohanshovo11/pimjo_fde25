@@ -8,9 +8,8 @@ export async function POST(req) {
   const ok = email === "admin@example.com" && password === "admin123";
   if (!ok) return NextResponse.json({ ok: false }, { status: 401 });
 
-  const token = createToken({ sub: "admin", email });
-
-  const res = NextResponse.json({ ok: true });
+  const token = await createToken({ sub: "admin", email });
+  const res = NextResponse.json({ ok: true, token });
   res.cookies.set("auth_token", token, {
     httpOnly: true,
     secure: true,

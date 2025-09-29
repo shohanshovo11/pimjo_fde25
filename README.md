@@ -134,6 +134,10 @@ src/
 
 ## Deployment
 
+### Live Demo
+
+**Deployed Application**: [https://pimjo-fde25.vercel.app/](https://pimjo-fde25.vercel.app/)
+
 ### Vercel Deployment
 
 1. **Push to GitHub**

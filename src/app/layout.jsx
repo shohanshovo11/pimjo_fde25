@@ -15,11 +15,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-
     <html lang="en" className={dmSans.variable}>
-      <body
-        className={`antialiased`}
-      >
+      <body className="antialiased text-black font-normal text-sm">
         {children}
       </body>
     </html>

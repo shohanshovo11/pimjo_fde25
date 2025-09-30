@@ -1,47 +1,4 @@
 export default function RecentOrdersCard({ className = "", orders }) {
-  const defaultRows = [
-    {
-      product: "Macbook pro 13”",
-      info: "3 Variants",
-      category: "Laptop",
-      price: "$2399.00",
-      status: "Delivered",
-      avatar: "/images/products/image_1.png",
-    },
-    {
-      product: "Apple Watch Ultra",
-      info: "1 Variants",
-      category: "Watch",
-      price: "$799.00",
-      status: "Pending",
-      avatar: "/images/products/image_2.png",
-    },
-    {
-      product: "iPhone 13 Pro Max",
-      info: "3 Variants",
-      category: "Mobile",
-      price: "$1080.00",
-      status: "Delivered",
-      avatar: "/images/products/image_3.png",
-    },
-    {
-      product: "iPad Pro 3rd Gen",
-      info: "3 Variants",
-      category: "Electronics",
-      price: "$899.00",
-      status: "On hold",
-      avatar: "/images/products/image_4.png",
-    },
-    {
-      product: "Airpods Pro 2nd Gen",
-      info: "1 Variants",
-      category: "Accessories",
-      price: "$249.00",
-      status: "Delivered",
-      avatar: "/images/products/image_5.png",
-    },
-  ];
-
   return (
     <div
       className={`rounded-xl border border-gray-200 bg-white p-4 shadow-sm ${className}`}
@@ -89,7 +46,7 @@ export default function RecentOrdersCard({ className = "", orders }) {
                         {r.product || r.customer}
                       </div>
                       <div className="text-xs text-gray-500">
-                        {r.info || r.email}
+                        {r.variant || r.email}
                       </div>
                     </div>
                   </div>

@@ -1,28 +1,37 @@
 "use client";
 
+import NotificationPanel from "./NotificationPanel/NotificationPanel";
+import ThemeToggle from "./ThemeToggle/ThemeToggle";
+import UserProfileDropdown from "./UserProfileDropdown/UserProfileDropdown";
+
 export default function Topbar({ onMenu }) {
   return (
     <header className="h-16 px-4 lg:px-6 border-b border-gray-200 bg-white backdrop-blur sticky top-0 z-20">
       <div className="h-full flex items-center gap-3">
-        {/* Menu (mobile) */}
         <button
           onClick={onMenu}
-          className="lg:hidden inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-600 hover:bg-gray-50"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-gray-200 text-gray-600 hover:bg-gray-50"
         >
           <svg
-            viewBox="0 0 24 24"
-            className="h-5 w-5"
+            width="20"
+            height="20"
+            viewBox="0 0 16 12"
             fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M4 6h16M4 12h16M4 18h16" />
+            <path
+              d="M1.33334 1L14.6667 1M1.33334 11L14.6667 11M1.33334 6L8.00001 6"
+              stroke="#667085"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </button>
 
         {/* Search */}
         <div className="flex-1">
-          <label className="relative block">
+          <label className="relative block max-w-107.5">
             <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
               <svg
                 viewBox="0 0 24 24"
@@ -49,29 +58,11 @@ export default function Topbar({ onMenu }) {
 
         {/* Actions */}
         <div className="flex items-center gap-2">
-          <button className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-600 hover:bg-gray-50">
-            <svg
-              viewBox="0 0 24 24"
-              className="h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-            >
-              <path d="M15 17h5l-1.4-1.4A2 2 0 0 1 18 14.2V11a6 6 0 1 0-12 0v3.2c0 .5-.2 1-.6 1.4L4 17h5" />
-            </svg>
-          </button>
-
-          <div className="inline-flex items-center gap-2 pl-2">
-            <div className="h-9 w-9 rounded-full bg-indigo-500 text-white flex items-center justify-center font-medium">
-              M
-            </div>
-            <span className="hidden sm:block text-sm font-medium text-gray-900">
-              Musharof
-            </span>
-            <svg viewBox="0 0 24 24" className="h-4 w-4 text-gray-400">
-              <path d="M6 9l6 6 6-6" fill="currentColor" />
-            </svg>
+          <div className="hidden md:flex items-center gap-2">
+            <ThemeToggle />
+            <NotificationPanel />
           </div>
+          <UserProfileDropdown />
         </div>
       </div>
     </header>

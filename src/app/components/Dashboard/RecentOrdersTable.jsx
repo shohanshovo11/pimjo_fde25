@@ -1,5 +1,5 @@
-export default function RecentOrdersCard({ className = "" }) {
-  const rows = [
+export default function RecentOrdersCard({ className = "", orders }) {
+  const defaultRows = [
     {
       product: "Macbook pro 13”",
       info: "3 Variants",
@@ -75,23 +75,31 @@ export default function RecentOrdersCard({ className = "" }) {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100">
-            {rows.map((r, i) => (
+            {(orders || defaultRows).map((r, i) => (
               <tr key={i}>
                 <td className="py-3 pr-3">
                   <div className="flex items-center gap-3">
                     <img
-                      src={r.avatar}
+                      src={r.avatar || "/images/products/image_1.png"}
                       alt=""
                       className="h-9 w-9 rounded-md object-cover bg-gray-100"
                     />
                     <div>
-                      <div className="text-gray-900">{r.product}</div>
-                      <div className="text-xs text-gray-500">{r.info}</div>
+                      <div className="text-gray-900">
+                        {r.product || r.customer}
+                      </div>
+                      <div className="text-xs text-gray-500">
+                        {r.info || r.email}
+                      </div>
                     </div>
                   </div>
                 </td>
-                <td className="py-3 pr-3 text-gray-700">{r.category}</td>
-                <td className="py-3 pr-3 text-gray-900">{r.price}</td>
+                <td className="py-3 pr-3 text-gray-700">
+                  {r.category || "Order"}
+                </td>
+                <td className="py-3 pr-3 text-gray-900">
+                  {r.price || `$${r.total?.toFixed(2)}`}
+                </td>
                 <td className="py-3 pl-3">
                   <StatusPill value={r.status} />
                 </td>

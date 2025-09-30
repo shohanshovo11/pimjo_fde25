@@ -1,6 +1,6 @@
 import MapIcon from "./MapIcon";
 
-export default function DemographicCard() {
+export default function DemographicCard({ demographics }) {
   return (
     <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
       <div className="flex items-center justify-between">
@@ -19,12 +19,43 @@ export default function DemographicCard() {
       </div>
 
       <div className="mt-4 space-y-3">
-        <Row flag="🇺🇸" country="USA" customers="32,759 Customers" value={79} />
+        <Row
+          flag="🇺🇸"
+          country="USA"
+          customers={
+            demographics
+              ? `${demographics.newCustomers.toLocaleString()} New Customers`
+              : "1,240 New Customers"
+          }
+          value={
+            demographics
+              ? Math.round(
+                  (demographics.newCustomers /
+                    (demographics.newCustomers +
+                      demographics.returningCustomers)) *
+                    100
+                )
+              : 25
+          }
+        />
         <Row
           flag="🇫🇷"
-          country="France"
-          customers="9,820 Customers"
-          value={23}
+          country="Returning"
+          customers={
+            demographics
+              ? `${demographics.returningCustomers.toLocaleString()} Returning Customers`
+              : "3,680 Returning Customers"
+          }
+          value={
+            demographics
+              ? Math.round(
+                  (demographics.returningCustomers /
+                    (demographics.newCustomers +
+                      demographics.returningCustomers)) *
+                    100
+                )
+              : 75
+          }
         />
       </div>
     </div>

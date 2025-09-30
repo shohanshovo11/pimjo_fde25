@@ -1,5 +1,28 @@
-export default function MonthlySalesCard({ className = "" }) {
-  const bars = [120, 180, 110, 420, 260, 230, 210, 260, 240, 280, 240, 260];
+export default function MonthlySalesCard({ className = "", salesData }) {
+  // Use API data if available, otherwise fallback to default
+  const bars = salesData
+    ? [
+        120,
+        180,
+        110,
+        salesData.current / 100,
+        260,
+        230,
+        210,
+        260,
+        240,
+        280,
+        240,
+        260,
+      ]
+    : [120, 180, 110, 420, 260, 230, 210, 260, 240, 280, 240, 260];
+
+  const currentValue = salesData?.current
+    ? `$${(salesData.current / 1000).toFixed(0)}K`
+    : "$45.6K";
+  const growthPercent = salesData?.growth
+    ? `+${salesData.growth.toFixed(1)}%`
+    : "+19.5%";
 
   return (
     <div

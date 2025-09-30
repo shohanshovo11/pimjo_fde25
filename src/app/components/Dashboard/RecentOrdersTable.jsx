@@ -6,7 +6,7 @@ export default function RecentOrdersCard({ className = "" }) {
       category: "Laptop",
       price: "$2399.00",
       status: "Delivered",
-      avatar: "/images/rows/mac.jpg",
+      avatar: "/images/products/image_1.png",
     },
     {
       product: "Apple Watch Ultra",
@@ -14,7 +14,7 @@ export default function RecentOrdersCard({ className = "" }) {
       category: "Watch",
       price: "$799.00",
       status: "Pending",
-      avatar: "/images/rows/watch.jpg",
+      avatar: "/images/products/image_2.png",
     },
     {
       product: "iPhone 13 Pro Max",
@@ -22,7 +22,7 @@ export default function RecentOrdersCard({ className = "" }) {
       category: "Mobile",
       price: "$1080.00",
       status: "Delivered",
-      avatar: "/images/rows/iphone.jpg",
+      avatar: "/images/products/image_3.png",
     },
     {
       product: "iPad Pro 3rd Gen",
@@ -30,7 +30,7 @@ export default function RecentOrdersCard({ className = "" }) {
       category: "Electronics",
       price: "$899.00",
       status: "On hold",
-      avatar: "/images/rows/ipad.jpg",
+      avatar: "/images/products/image_4.png",
     },
     {
       product: "Airpods Pro 2nd Gen",
@@ -38,7 +38,7 @@ export default function RecentOrdersCard({ className = "" }) {
       category: "Accessories",
       price: "$249.00",
       status: "Delivered",
-      avatar: "/images/rows/airpods.jpg",
+      avatar: "/images/products/image_5.png",
     },
   ];
 

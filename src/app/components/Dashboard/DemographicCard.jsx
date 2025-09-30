@@ -1,3 +1,5 @@
+import MapIcon from "./MapIcon";
+
 export default function DemographicCard() {
   return (
     <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
@@ -10,7 +12,8 @@ export default function DemographicCard() {
 
       <div className="mt-3 rounded-lg bg-gray-50 h-48 relative overflow-hidden">
         {/* quick fake map pins */}
-        <span className="absolute left-1/3 top-1/3 h-2 w-2 rounded-full bg-indigo-500" />
+        <MapIcon />
+        <span className="absolute left-1/5 top-1/3 h-2 w-2 rounded-full bg-indigo-500" />
         <span className="absolute left-2/3 top-1/2 h-2 w-2 rounded-full bg-indigo-500" />
         <span className="absolute left-1/2 top-2/3 h-2 w-2 rounded-full bg-indigo-500" />
       </div>

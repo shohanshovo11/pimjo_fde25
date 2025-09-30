@@ -87,10 +87,17 @@ AUTH_SECRET=your-super-secret-jwt-key-here
 
 ## Default Credentials
 
-For development and testing purposes, use these default credentials:
+**LOGIN READY**: You can now log in with these credentials:
 
 - **Email**: `admin@example.com`
 - **Password**: `admin123`
+
+These credentials are fully functional and will:
+
+- Generate a secure JWT token
+- Set authentication cookies
+- Grant access to the dashboard
+- Persist login for 7 days
 
 **Important**: Change these credentials before deploying to production.
 
@@ -192,7 +199,7 @@ To integrate with external authentication providers:
 
 ## Security Notes
 
-- **Environment Variables**: Never commit `.env.local` or sensitive credentials
+- **Environment Variables**: Never commit `.env` or sensitive credentials
 - **AUTH_SECRET**: Use a strong, unique secret for each environment
 - **Default Credentials**: Change default login credentials before production
 - **HTTPS**: Always use HTTPS in production environments
